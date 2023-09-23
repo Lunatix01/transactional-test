@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: aland
+    ports:
+      - 5334:5432
+
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: aland
+      POSTGRES_PASSWORD: aland
+      PG_DATA: /data/postgres
+
+    volumes:
+      - postgres:/data/postgres
+    restart: unless-stopped
+
+volumes:
+  postgres:
+
+networks:
+  db:
