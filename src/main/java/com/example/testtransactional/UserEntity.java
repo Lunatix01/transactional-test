@@ -27,6 +27,4 @@ public class UserEntity {
 
     @Column(name = "slug")
     String slug;
-
-
 }
